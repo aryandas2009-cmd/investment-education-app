@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Education</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">💹</div>
+        <div class="brand-title">Investment Education</div>
+        <div class="brand-subtitle">Learn, compare, explore trends</div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item" data-topic="stocks">Stocks</button>
+        <button class="nav-item" data-topic="bonds">Bonds</button>
+        <button class="nav-item" data-topic="mutual-funds">Mutual Funds</button>
+        <button class="nav-item" data-topic="etf">ETFs</button>
+        <button class="nav-item" data-topic="real-estate">Real Estate</button>
+        <button class="nav-item" data-topic="crypto">Cryptocurrency</button>
+        <button class="nav-item" data-topic="savings-accounts">Savings Accounts</button>
+        <button class="nav-item" data-topic="retirement-accounts">Retirement Accounts</button>
+      </nav>
+      <div class="sidebar-footer">Educational use only</div>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <div class="header-left">
+          <h1>Investment Analysis & Results</h1>
+          <p class="header-subtitle">Pros, cons, and considerations for each type</p>
+        </div>
+        <div class="header-right">
+          <input id="stockSymbolInput" class="search-input" placeholder="Enter stock symbol (e.g., AAPL, MSFT, GOOGL)">
+          <button id="searchStockButton" class="search-button">Search</button>
+        </div>
+      </header>
+      <section id="resultsContent" class="results">
+        <div class="welcome">
+          <div class="welcome-icon">💡</div>
+          <h2>Welcome</h2>
+          <p>Select an investment type on the left. Use the search box to see a 5-year trend for a symbol.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
+
