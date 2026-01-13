@@ -8,24 +8,12 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
+  <div class="grid4">
+    <section class="box suggestions" id="suggestionsBox">
       <div class="brand">
         <div class="brand-icon">💹</div>
         <div class="brand-title">Investment Education</div>
-        <div class="brand-subtitle">Learn, compare, explore trends</div>
-      </div>
-      <div class="chat-header">
-        <h2>Chat</h2>
-        <p class="chat-subtitle">Ask about investment types and why/why not</p>
-      </div>
-      <div id="chatMessages" class="chat-messages">
-        <div class="message bot-message">
-          <div class="message-content">
-            <p>👋 Welcome! Ask me about stocks, bonds, mutual funds, ETFs, real estate, crypto, savings accounts, or retirement accounts.</p>
-            <p>Try: “Tell me about stocks” or “What are the types of investments?”</p>
-          </div>
-        </div>
+        <div class="brand-subtitle">Learn, simulate, and explore trends</div>
       </div>
       <div class="quick-topics">
         <div class="quick-title">Quick Topics</div>
@@ -40,31 +28,38 @@
           <button class="topic-tag" data-topic="retirement-accounts">Retirement</button>
         </div>
       </div>
+      <div class="suggest-actions">
+        <input id="stockSymbolInput" class="search-input" placeholder="Enter stock symbol (e.g., AAPL, MSFT, GOOGL)">
+        <button id="searchStockButton" class="search-button">Search</button>
+        <button id="roiCalcButton" class="calc-button">ROI</button>
+        <button id="ciCalcButton" class="calc-button">Compound</button>
+      </div>
+    </section>
+    <section class="box chat" id="chatBox">
+      <div class="chat-header">
+        <h2>Chat</h2>
+        <p class="chat-subtitle">Ask about investment types and why/why not</p>
+      </div>
       <div class="chat-input-row">
         <input id="chatInput" class="chat-input" placeholder="Type your question..." autocomplete="off">
         <button id="sendButton" class="send-button">Send</button>
       </div>
-      <div class="sidebar-footer">Educational use only</div>
-    </aside>
-    <main class="main">
-      <header class="header">
-        <div class="header-left">
-          <h1>Investment Analysis & Results</h1>
-          <p class="header-subtitle">Pros, cons, and considerations for each type</p>
-        </div>
-        <div class="header-right">
-          <input id="stockSymbolInput" class="search-input" placeholder="Enter stock symbol (e.g., AAPL, MSFT, GOOGL)">
-          <button id="searchStockButton" class="search-button">Search</button>
-        </div>
-      </header>
-      <section id="resultsContent" class="results">
-        <div class="welcome">
-          <div class="welcome-icon">💡</div>
-          <h2>Welcome</h2>
-          <p>Select an investment type on the left. Use the search box to see a 5-year trend for a symbol.</p>
-        </div>
-      </section>
-    </main>
+      <div class="chat-note">Results appear in the right panes.</div>
+    </section>
+    <section class="box results" id="resultsPanel">
+      <div class="welcome">
+        <div class="welcome-icon">💡</div>
+        <h2>Results & Analysis</h2>
+        <p>Select a topic or search a stock to see details.</p>
+      </div>
+    </section>
+    <section class="box charts" id="chartsPanel">
+      <div class="welcome">
+        <div class="welcome-icon">📊</div>
+        <h2>Graphs & Trends</h2>
+        <p>Charts render here for stocks and calculators.</p>
+      </div>
+    </section>
   </div>
   <script src="app.js"></script>
 </body>
